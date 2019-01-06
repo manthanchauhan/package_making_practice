@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/package_making_practice.iml" filepath="$PROJECT_DIR$/.idea/package_making_practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../plyer/.idea/plyer.iml" filepath="$PROJECT_DIR$/../plyer/.idea/plyer.iml" />
     </modules>
   </component>
 </project>
