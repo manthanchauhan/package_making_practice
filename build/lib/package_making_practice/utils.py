@@ -70,4 +70,5 @@ class Proxy(object):
         object.__getattribute__(self, '_ensure_obj')()
         return repr(object.__getattribute__(self, '_obj'))
 
-
+    def random(self):
+        print('HI')

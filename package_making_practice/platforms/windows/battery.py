@@ -1,27 +1,15 @@
 """
-Battery
-------
-provides battery information of windows PC
-usage:
->>> from package_making_practice import battery
->>> battery.status
+Module of windows API for plyer.battery
 """
 
 from package_making_practice.platforms.windows.libs.batterystatus import battery_status
+from package_making_practice.facades import Battery
 
 
-class Battery(object):
+class WinBattery(Battery):
     """
-    battery info facade
+    implementation of windows battery API
     """
-    @property
-    def status(self):
-        return self.get_state()
-
-    def get_state(self):
-        return self._get_state()
-
-    # private
 
     def _get_state(self):
         status = {
@@ -34,3 +22,11 @@ class Battery(object):
         status["isCharging"] = query["BatteryFlag"] == 8
         status['percentage'] = query['BatteryLifePercent']
         return status
+
+
+def instance():
+    """
+    instance for facade proxy
+    :return:
+    """
+    return WinBattery()
